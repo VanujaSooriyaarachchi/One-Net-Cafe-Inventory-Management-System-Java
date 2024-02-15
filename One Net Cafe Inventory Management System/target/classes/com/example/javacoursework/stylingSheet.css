@@ -1,0 +1,102 @@
+.sideButtons {
+    -fx-background-color: #3F2B63;
+}
+.sideButtons:hover
+{
+ -fx-background-color: #2A1C42;
+}
+.sideButtons:pressed
+{
+    -fx-background-color: #7156DD;
+}
+
+.vbox{
+    -fx-background-color:  #3F2B63;
+}
+
+.addImage {
+    -fx-background-color:#ffffff;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-font-size: 20;
+}
+.linear-grad
+{
+    -fx-background-color: linear-gradient(to bottom left, #00BFFF, #1B03A3);
+}
+
+.startButton
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: linear-gradient(to bottom left, #00BFFF, #1B03A3);
+    -fx-border-radius: 0px;
+    -fx-font-family: sans-serif;
+    -fx-padding: 10px 30px;
+    -fx-font-weight: 400;
+}
+
+.startButton:hover
+{
+    -fx-text-fill: #39FF14;
+    -fx-spacing: 0.25em;
+}
+
+.startButton:pressed
+{
+    -fx-text-fill: #80AFF5;
+}
+
+.backButton
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: linear-gradient(to bottom left, #00BFFF, #1B03A3);
+    -fx-background-radius: 0;
+    -fx-font-family: sans-serif;
+    -fx-padding: 10px 30px;
+    -fx-font-weight: 400;
+}
+.backButton:hover{
+    -fx-text-fill: #FF1818;
+    -fx-spacing: 0.25em;
+}
+
+.table-view
+{
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #0c17ba,#00BFFF);
+    -fx-border-radius: 8px;
+    -fx-padding: 0px;
+}
+
+.table-view.table-column{
+    -fx-alignment: CENTER;
+}
+
+.table-view.column-header-background{
+    -fx-background-color:linear-gradient(to bottom right, #0c17ba,#00BFFF);
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 8px 8px 8px 8px;
+}
+
+.table-view.column-header .filer{
+    -fx-background-insets: transparent;
+    -fx-size: 40px;
+
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #000001;
+    -fx-font-size: "Arial";
+}
+
+.homePage{
+    -fx-background-color: linear-gradient(to bottom left, #00BFFF, #1B03A3);
+    -fx-background-radius: 0;
+
+}
+
+.choice{
+    -fx-background-color: linear-gradient(to bottom left, #00BFFF, #1B03A3);
+    -fx-background-radius: 0;
+    -fx-border-color: #ffffff;
+}

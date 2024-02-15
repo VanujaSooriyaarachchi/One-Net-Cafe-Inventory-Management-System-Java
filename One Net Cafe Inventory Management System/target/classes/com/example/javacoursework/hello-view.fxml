@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javacoursework.HelloController">
+   <children>
+      <VBox layoutY="-5.0" prefHeight="614.0" prefWidth="254.0" styleClass="homePage" stylesheets="@stylingSheet.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <Pane prefHeight="258.0" prefWidth="254.0" styleClass="homePage" stylesheets="@stylingSheet.css">
+               <children>
+                  <ImageView fitHeight="180.0" fitWidth="226.0" layoutX="22.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logoPng.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnItems" alignment="BASELINE_LEFT" graphicTextGap="13.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="70.0" prefWidth="284.0" styleClass="choice" stylesheets="@stylingSheet.css" text="Items" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDealers" alignment="BASELINE_LEFT" graphicTextGap="13.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="70.0" prefWidth="284.0" styleClass="choice" stylesheets="@stylingSheet.css" text="Dealers" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="pnlStatus" layoutX="254.0" layoutY="32.0" prefHeight="108.0" prefWidth="181.0" style="-fx-background-color: #2554C7;">
+         <children>
+            <Label fx:id="lblStatus" layoutX="21.0" layoutY="37.0" text="Items">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStatusMin" layoutX="22.0" layoutY="27.0" text="/home/items" />
+         </children>
+      </Pane>
+      <Pane layoutY="563.0" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutY="4.0" mnemonicParsing="false" onAction="#goToPageOne" prefHeight="17.0" prefWidth="96.0" styleClass="backButton" stylesheets="@stylingSheet.css" text="Back">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <StackPane layoutX="434.0" layoutY="32.0">
+         <children>
+            <Pane fx:id="pnlStatusDealers" prefHeight="108.0" prefWidth="539.0" style="-fx-background-color: #2554C7;">
+               <children>
+                  <Button fx:id="btnSelectDealers" layoutX="48.0" layoutY="39.0" mnemonicParsing="false" onAction="#dealerClicks" style="-fx-background-color: #2554C7;" text="Select Dealers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDealerDetails" layoutX="211.0" layoutY="39.0" mnemonicParsing="false" onAction="#dealerClicks" style="-fx-background-color: #2554C7;" text="Dealer Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDealerItems" layoutX="372.0" layoutY="39.0" mnemonicParsing="false" onAction="#dealerClicks" style="-fx-background-color: #2554C7;" text="Dealer Items" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlStatusItems" prefHeight="108.0" prefWidth="539.0" style="-fx-background-color: #2554C7;">
+               <children>
+                  <Button fx:id="btnAddItem" layoutX="48.0" layoutY="39.0" mnemonicParsing="false" onAction="#itemClicks" style="-fx-background-color: #2554C7;" text="Add Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnUpdateItem" layoutX="167.0" layoutY="39.0" mnemonicParsing="false" onAction="#itemClicks" style="-fx-background-color: #2554C7;" text="Update Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDeleteItem" layoutX="304.0" layoutY="39.0" mnemonicParsing="false" onAction="#itemClicks" style="-fx-background-color: #2554C7;" text="Delete Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewItem" layoutX="432.0" layoutY="39.0" mnemonicParsing="false" onAction="#itemClicks" style="-fx-background-color: #2554C7;" text="View Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Pane layoutX="869.0" prefHeight="30.0" prefWidth="102.0">
+         <children>
+            <ImageView fx:id="btnClose" fitHeight="30.0" fitWidth="25.0" layoutX="77.0" layoutY="4.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@closebtn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="32.0" fitWidth="28.0" layoutX="51.0" onMouseClicked="#handleMinimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@minimizebtn.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <StackPane fx:id="stackPnlDealer" layoutX="284.0" layoutY="140.0" opacity="0.0">
+         <children>
+            <Pane fx:id="pnlDealerItems" opacity="0.0" prefHeight="355.0" prefWidth="690.0">
+               <children>
+                  <TableView fx:id="tblDealerItems" layoutX="44.0" layoutY="27.0" prefHeight="301.0" prefWidth="603.0" style="-fx-background-color: #dee6f9;">
+                     <columns>
+                        <TableColumn fx:id="colDealerNameItems" minWidth="150.0" prefWidth="75.0" text="Dealer Name" />
+                        <TableColumn fx:id="colDealerItemItems" minWidth="150.0" prefWidth="75.0" text="Dealer Item" />
+                        <TableColumn fx:id="colItemPriceItems" minWidth="150.0" prefWidth="75.0" text="Item Price" />
+                        <TableColumn fx:id="colItemQuantityItems" minWidth="150.0" prefWidth="75.0" text="Item Quantity" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlDealerDetails" opacity="0.0" prefHeight="355.0" prefWidth="690.0">
+               <children>
+                  <TableView fx:id="tblDealerDetails" layoutX="44.0" layoutY="27.0" prefHeight="301.0" prefWidth="603.0" style="-fx-background-color: #dee6f9;">
+                     <columns>
+                        <TableColumn fx:id="colDealerName" minWidth="150.0" prefWidth="205.60003662109375" text="Dealer Name" />
+                        <TableColumn fx:id="colDealerContact" minWidth="150.0" prefWidth="208.79998779296875" text="Contact Number" />
+                        <TableColumn fx:id="colDealerLocation" minWidth="150.0" prefWidth="187.99993896484375" text="Location" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlSelectDealers" prefHeight="355.0" prefWidth="690.0">
+               <children>
+                  <TableView fx:id="tblDealers" layoutX="212.0" layoutY="35.0" prefHeight="186.0" prefWidth="245.0">
+                     <columns>
+                        <TableColumn fx:id="colDealer" minWidth="150.0" prefWidth="244.20001220703125" text="Dealers" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnDealerPick" layoutX="350.0" layoutY="259.0" mnemonicParsing="false" onAction="#pickDealer" prefHeight="52.0" prefWidth="111.0" style="-fx-background-color: #00b8c2;" text="Pick Dealers" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stackPnlItem" layoutX="284.0" layoutY="140.0">
+         <children>
+            <Pane fx:id="pnlViewItem" prefHeight="352.0" prefWidth="690.0" visible="false">
+               <children>
+                  <TableView fx:id="tableView4" layoutX="-31.0" layoutY="11.0" prefHeight="286.0" prefWidth="719.0">
+                     <columns>
+                        <TableColumn fx:id="colItemCode4" minWidth="60.7999267578125" prefWidth="68.7999267578125" text="Item Code" />
+                        <TableColumn fx:id="colItemName4" minWidth="100.0" prefWidth="101.5999755859375" text="Item Name" />
+                        <TableColumn fx:id="colItemBrand4" minWidth="80.00006103515625" prefWidth="80.00006103515625" text="Item Brand" />
+                        <TableColumn fx:id="colItemPrice4" minWidth="86.39996337890625" prefWidth="93.60012817382812" text="Item Price" />
+                        <TableColumn fx:id="colItemQuantity4" minWidth="51.20001220703125" prefWidth="63.199951171875" text="Quantity" />
+                        <TableColumn fx:id="colItemCategory4" minWidth="56.7999267578125" prefWidth="75.99993896484375" text="Category" />
+                        <TableColumn fx:id="colDate4" minWidth="88.80010986328125" prefWidth="88.80010986328125" text="Purchased &#10;Date" />
+                        <TableColumn fx:id="colImage" minWidth="88.80010986328125" prefWidth="143.7999267578125" text="Image" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlDeleteItem" opacity="0.0" prefHeight="355.0" prefWidth="690.0">
+               <children>
+                  <TableView fx:id="tableView3" layoutX="-24.0" layoutY="141.0" prefHeight="314.0" prefWidth="708.0">
+                     <columns>
+                        <TableColumn fx:id="colItemCode3" minWidth="84.0" prefWidth="86.39996337890625" text="Item Code" />
+                        <TableColumn fx:id="colItemName3" minWidth="100.0" prefWidth="153.60006713867188" text="Item Name" />
+                        <TableColumn fx:id="colItemBrand3" minWidth="100.0" prefWidth="118.39996337890625" text="Item Brand" />
+                        <TableColumn fx:id="colItemPrice3" minWidth="86.39996337890625" prefWidth="86.39996337890625" text="Item Price" />
+                        <TableColumn fx:id="colItemQuantity3" minWidth="51.20001220703125" prefWidth="57.5999755859375" text="Quantity" />
+                        <TableColumn fx:id="colItemCategory3" minWidth="100.0" prefWidth="75.0" text="Category" />
+                        <TableColumn fx:id="colDate3" minWidth="100.0" prefWidth="75.0" text="Purchased &#10;Date" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="20.0" layoutY="36.0" prefHeight="21.0" prefWidth="72.0" text="Item Code:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="deleteItemCodeField" layoutX="131.0" layoutY="34.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Button fx:id="btnDelete" layoutX="551.0" layoutY="20.0" mnemonicParsing="false" onAction="#deleteItems" prefHeight="45.0" prefWidth="102.0" style="-fx-background-color: #eb230e;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlUpdateItem" opacity="0.0" prefHeight="355.0" prefWidth="690.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="12.0" prefHeight="21.0" prefWidth="72.0" text="Item Code:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemCode" layoutX="119.0" layoutY="10.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="9.0" layoutY="48.0" prefHeight="21.0" prefWidth="96.0" text="Item Name:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemName" layoutX="120.0" layoutY="45.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="9.0" layoutY="83.0" prefHeight="21.0" prefWidth="96.0" text="Item Brand:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemBrand" layoutX="120.0" layoutY="81.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="9.0" layoutY="119.0" prefHeight="21.0" prefWidth="96.0" text="Item Price:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemPrice" layoutX="120.0" layoutY="117.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="10.0" layoutY="155.0" prefHeight="21.0" prefWidth="96.0" text="Quantity:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemQuantity" layoutX="121.0" layoutY="153.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="10.0" layoutY="191.0" prefHeight="21.0" prefWidth="96.0" text="Category:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateItemCategory" layoutX="121.0" layoutY="189.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="11.0" layoutY="227.0" prefHeight="21.0" prefWidth="111.0" text="Purchased Date:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="521.0" layoutY="205.0" mnemonicParsing="false" onAction="#updateItems" prefHeight="45.0" prefWidth="102.0" style="-fx-background-color: #00b8c2;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="updateDate" layoutX="122.0" layoutY="225.0" prefHeight="25.0" prefWidth="196.0" />
+                  <AnchorPane id="addImage" layoutX="462.0" layoutY="13.0" prefHeight="160.0" prefWidth="160.0" stylesheets="@stylingSheet.css">
+                     <styleClass>
+                        <String fx:value="addImage" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <ImageView fx:id="updateItemImageView" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="updateItemImage" layoutY="135.0" mnemonicParsing="false" onAction="#handleAddImage" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #e5e5e5;" text="Add Image +" textAlignment="CENTER">
+                           <font>
+                              <Font name="Tahoma" size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tableView2" layoutX="-24.0" layoutY="274.0" prefHeight="186.0" prefWidth="708.0">
+                     <columns>
+                        <TableColumn fx:id="colItemCode2" minWidth="84.0" prefWidth="86.39996337890625" text="Item Code" />
+                        <TableColumn fx:id="colItemName2" minWidth="100.0" prefWidth="153.60006713867188" text="Item Name" />
+                        <TableColumn fx:id="colItemBrand2" minWidth="100.0" prefWidth="118.39996337890625" text="Item Brand" />
+                        <TableColumn fx:id="colItemPrice2" minWidth="86.39996337890625" prefWidth="86.39996337890625" text="Item Price" />
+                        <TableColumn fx:id="colItemQuantity2" minWidth="51.20001220703125" prefWidth="57.5999755859375" text="Quantity" />
+                        <TableColumn fx:id="colItemCategory2" minWidth="100.0" prefWidth="75.0" text="Category" />
+                        <TableColumn fx:id="colDate2" minWidth="100.0" prefWidth="75.0" text="Purchased &#10;Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlAddItem" prefHeight="349.0" prefWidth="690.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="-24.0" layoutY="277.0" prefHeight="186.0" prefWidth="708.0">
+                     <columns>
+                        <TableColumn fx:id="colItemCode" minWidth="84.0" prefWidth="86.39996337890625" text="Item Code" />
+                        <TableColumn fx:id="colItemName" minWidth="100.0" prefWidth="153.60006713867188" text="Item Name" />
+                        <TableColumn fx:id="colItemBrand" minWidth="100.0" prefWidth="118.39996337890625" text="Item Brand" />
+                        <TableColumn fx:id="colItemPrice" minWidth="86.39996337890625" prefWidth="86.39996337890625" text="Item Price" />
+                        <TableColumn fx:id="colItemQuantity" minWidth="51.20001220703125" prefWidth="57.5999755859375" text="Quantity" />
+                        <TableColumn fx:id="colItemCategory" minWidth="100.0" prefWidth="75.0" text="Category" />
+                        <TableColumn fx:id="colDate" minWidth="100.0" prefWidth="75.0" text="Purchased &#10;Date" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="8.0" layoutY="13.0" prefHeight="21.0" prefWidth="196.0" text="Item Code:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtItemCode" layoutX="119.0" layoutY="11.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="7.0" layoutY="49.0" prefHeight="21.0" prefWidth="96.0" text="Item Name:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtItemName" layoutX="118.0" layoutY="47.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="7.0" layoutY="85.0" prefHeight="21.0" prefWidth="96.0" text="Item Brand:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtItemBrand" layoutX="118.0" layoutY="83.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="7.0" layoutY="121.0" prefHeight="21.0" prefWidth="96.0" text="Item Price:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtItemPrice" layoutX="118.0" layoutY="119.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="8.0" layoutY="157.0" prefHeight="21.0" prefWidth="96.0" text="Quantity:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtQuantity" layoutX="118.0" layoutY="155.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="8.0" layoutY="192.0" prefHeight="21.0" prefWidth="96.0" text="Category:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCategory" layoutX="119.0" layoutY="190.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="9.0" layoutY="227.0" prefHeight="21.0" prefWidth="111.0" text="Purchased Date:">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAdd" layoutX="525.0" layoutY="200.0" mnemonicParsing="false" onAction="#saveItemData" prefHeight="45.0" prefWidth="102.0" style="-fx-background-color: #4a74dd;" text="Add " textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="datePicker" layoutX="120.0" layoutY="225.0" prefHeight="25.0" prefWidth="196.0" />
+                  <AnchorPane id="addImage" layoutX="465.0" layoutY="12.0" prefHeight="147.0" prefWidth="151.0" stylesheets="@stylingSheet.css">
+                     <styleClass>
+                        <String fx:value="addImage" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <ImageView fx:id="addImageView" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="btnAddImage" layoutY="135.0" mnemonicParsing="false" onAction="#handleAddImage" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #e5e5e5;" text="Add Image +" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+
+   </children>
+</AnchorPane>
